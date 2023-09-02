@@ -1,0 +1,870 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  padding: 20px;
+}
+/* header section  */
+.header-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.head h1 {
+  color: white;
+  text-shadow:3px 3px 10px black;
+}
+
+.list-section ul {
+   display: flex;
+   list-style-type: none;
+}
+
+.list-section a {
+  display: flex;
+  margin: 20px;
+  font-size: x-large;
+  font-weight: bolder;
+  text-decoration: none;
+  color:black;
+}
+
+.input-section {
+  margin-top: 50px;
+}
+
+.input-section input {
+  padding:11px 0 11px 35px;
+  width: 300px;
+  border-radius: 20px;
+  font-size:20px;
+}
+
+.input-section .icon {
+  font-size: x-large;
+  color: lightskyblue;
+  margin: -36px 0 0 10px;
+}
+
+.input-section ::placeholder {
+  font-size: large;
+  font-weight: bolder;
+  color: black;
+  padding:  0 0 0 2rem;
+}
+
+/*  body section */
+
+.first-body {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.first-quo {
+  margin: 85px 0 0 50px;
+  border: solid transparent;
+  width: 600px;
+}
+
+.first-quo h1 {
+  font-size: 80px;
+}
+
+.first-quo p {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.image-section img {
+  width: 800px;
+  border-radius:40px;
+  margin:80px 0 0  30px;
+  box-shadow: 2px 6px 20px black;
+}
+
+.button-sec a {
+  text-decoration: none;
+  color:white;
+}
+
+.button-sec li:hover {
+  text-shadow: 3px 3px 15px black;
+  border: solid green;
+  background-color: white;
+  color: green;
+  transition: 1s;
+}
+
+.button-sec li{
+  list-style-type: none;
+  font-size: x-large;
+  border: solid green;
+  border-radius: 15px;
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: green;
+  color: white;
+}
+
+/* second body */
+
+.second-body{
+  margin-top: 70px;
+  background-color:rgba(208, 205, 205,0.5);
+}
+
+.sec-body {
+  text-align:center;
+}
+
+.s-b-first-quo h1 {
+  text-transform: capitalize;
+  font-size: 60px;
+  padding-top: 5%;
+}
+
+.s-b-second-quo p {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.first-img div {
+  display: inline-flex;
+  margin: 1% 0 3% 10%;
+
+}
+
+.first-img img {
+  width: 150px;
+  border-radius: 30px;
+}
+
+.second-img  {
+  display: inline-flex;
+  margin-left: 7%;
+  padding-bottom: 6%;
+}
+ .second-img div {
+  display: inline-flex;
+  margin: 0 0 0 35%
+ };
+
+
+.second-img img {
+  width: 150px;
+  border-radius: 30px;
+}
+
+.third-section  {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+
+.third-section .img img  {
+  width: 400px;
+}
+
+.third-section .th-s-first-text {
+  margin: 8% 0;
+}
+
+.third-section .th-s-first-text i {
+  font-size: medium;
+  font-weight: 800;
+  font-style: oblique;
+  background-color: rgb(184, 247, 184);
+  color: green;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.third-section .th-s-first-text h1 {
+  font-size: 80px;
+  border: solid transparent;
+  width: 900px;
+  margin-top: -0.8rem;
+}
+
+.third-section .th-s-second-text blockquote {
+  font-size: 30px;
+  font-weight: bold;
+  border: solid transparent;
+  width: 750px;
+  margin: -0.9rem 0 0 0;
+}
+
+.third-section .th-s-first-text button {
+  border: solid green;
+  font-size: large;
+  font-weight: 900;
+  font-style: oblique;
+  background-color: green;
+  color: white;
+  padding:5px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+/* fourth section */
+
+.fourth-section {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.fourth-text {
+  padding-top: 25%;
+}
+
+.fourth-text h1 {
+  font-size: 90px;
+  color: whitesmoke;
+  text-shadow: 2px 2px 10px black;
+  font-style: oblique;
+  text-transform: capitalize;
+}
+
+.fourth-input input {
+  width: 600px;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 10%;
+}
+
+.fourth-input ::placeholder {
+  font-size: large;
+  font-weight: bolder;
+  color: black;
+  text-transform: capitalize;
+  font-style: oblique;
+  padding:2% 0 0  7%;
+}
+
+.fourth-input .icon {
+  color: green;
+  font-size: xx-large;
+  margin: -9.5rem 37rem 0 0;
+}
+
+.fourth-input button {
+ position: relative;
+ top:-3.2rem;
+ left:12.5rem;
+ width: 200px;
+ padding: 9px;
+ font-size: x-large;
+ font-style: oblique;
+ border-radius: 10px;
+ background-color: green;
+ color: white;
+ border: green;
+}
+
+.fourth-input button:hover {
+  box-shadow: 2px 2px 20px green;
+}
+
+/* footer section */
+
+.footer {
+  margin-top: 5%;
+}
+
+.main-footer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(208, 205, 205,0.5);
+}
+
+.name {
+  margin-top:15px;
+}
+
+.name h1 {
+  font-size: 35px;
+  text-transform: capitalize;
+}
+
+.name blockquote {
+  font-size: 20px;
+  text-transform: capitalize;
+  border: solid transparent;
+  width: 300px;
+}
+
+.about,.company,.support,.get-in-touch ul,li {
+  font-size: x-large;
+  list-style-type: none;
+  margin-top: 2px;
+}
+
+.about li {
+  margin-top: 10px;
+}
+
+.company li {
+  margin-top: 10px;
+}
+
+.support li {
+  margin-top: 10px;
+}
+
+.about,.company,.support,.get-in-touch h1 {
+  text-transform: capitalize;
+}
+
+.get-in-touch {
+  margin-top:25px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(46, 177, 46);
+  color:white;
+  border-radius:0 0 50px 50px;
+}
+
+.links h1 {
+  text-transform: capitalize;
+}
+
+.icon ul{
+  margin: 0 0 0 -12rem;
+}
+
+.icons ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons ul li {
+  margin-left: 30%;
+  padding:5px;
+}
+
+
+/* do not touch please */
+ .output-search {
+  display:none;
+ }
+
+ .Recipe {
+  display:flex;
+  justify-content: space-around;
+ }
+/* do not touch please */
+
+.ninja h1 {
+  text-transform:capitalize;
+  text-align: center;
+  font-size:55px;
+  font-style: oblique;
+  color: green;
+  text-shadow:3px 3px 5px black;
+}
+
+.Nigeria-page {
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 10px;
+  align-items: start;
+  margin-top: 60px;
+}
+
+.cards {
+  display: flex;
+  
+  justify-content: space-evenly;
+  margin-top: 60px;
+}
+
+.card {
+   border: solid 1px transparent;
+   box-shadow: 3px 3px 15px black;
+   width: 600px;
+   height: auto;
+   border-radius: 20px;
+}
+
+.card img {
+  width: 95%;
+  border-radius: 20px;
+}
+
+.card blockquote {
+  font-size: xx-large;
+  font-style:oblique;
+  font-weight: 600;
+}
+
+.card h2 {
+  font-size: x-large;
+  text-transform: capitalize;
+  text-align: center;
+  color: green;
+  text-shadow:1px 1px 3px black;
+}
+
+.card h4 {
+  text-align:center;
+  font-size: xx-large;
+  color: green;
+  text-shadow:2px 2px 4px black;
+}
+
+.recipe-preview a {
+  color:black;
+  text-decoration: none;
+}
+
+/* erroe message styling start*/
+
+.warning {
+  display:grid;
+  justify-content: center;
+}
+
+.warning .icon {
+    font-size:3000%;
+    color:silver;
+    text-shadow: 2px 2px 10px black;
+}
+
+.warning h1 {
+  text-align: center;
+  font-size:xx-large;
+  font-style: oblique;
+  font-weight: bolder;
+}
+
+/* error message styling end*/
+
+/* media querry */
+
+@media screen   and (min-width:500px)  and (max-width:1024px) {
+
+  /* first body  section */
+
+  .first-quo {
+  width: 100%;
+}
+
+  .first-quo h1 {
+  font-size: 30px;
+}
+
+.first-quo p {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.image-section img {
+  width:100%;
+  margin:150px 0 0 0;
+}
+
+.button-sec li {
+  font-size:large;
+  width:100px;
+  padding:5px;
+}
+
+/* second body section  */
+
+.first-img img {
+  width: 90px;
+  height:100px;
+  border-radius: 30px;
+}
+
+.second-img  {
+  margin-left: 0%;
+}
+
+.second-img div {
+  margin: 0 0 0 25%
+}
+
+.second-img img {
+  width: 90px;
+  height:100px;
+  border-radius: 30px;
+}
+
+/* once in this code  */
+
+.first-img .fimg {
+  display:none;
+}
+
+/* once in this code */
+
+/* third section */
+
+.third-section .img img  {
+  width: 100%;
+}
+
+
+.third-section .th-s-first-text {
+  margin: 0% 0;
+}
+
+
+.third-section .th-s-first-text h1 {
+  font-size: 35px;
+  border: solid transparent;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.third-section .th-s-second-text blockquote {
+  font-size: 20px;
+  font-weight: bold;
+  border: solid transparent;
+  width: 100%;
+  margin: -0.9rem 0 0 0;
+}
+
+/* fourth section */
+
+.fourth-text h1 {
+  font-size: 50px;
+  color: whitesmoke;
+  text-shadow: 2px 2px 10px black;
+  font-style: oblique;
+  text-transform: capitalize;
+}
+
+.fourth-input .icon {
+  color: green;
+  font-size: xx-large;
+  margin: -7.2rem 37rem 0 0;
+}
+
+/* footer section  */
+
+.name h1 {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.name blockquote {
+  font-size: 15px;
+  text-transform: capitalize;
+  border: solid transparent;
+  width: 40%;
+  margin:0 0 0 -0.1rem;
+}
+
+.about,.company,.support,.get-in-touch ul,li {
+  font-size: medium;
+  margin-top: 0px;
+}
+
+.get-in-touch h1 {
+  font-size: large;
+}
+
+.about h1 {
+  font-size: large;
+}
+
+.company h1 {
+  font-size:large;
+}
+
+.support h1 {
+  font-size:large
+}
+
+.about {
+  font-size: large;
+  margin:0 0 0 -17rem;
+}
+
+.company {
+  margin:0 0 0 1.5rem;
+}
+
+.about ul {
+  font-size: large;
+  margin:0 0 0 -2.5rem;
+}
+
+.company h1 {
+  margin:15px 0 0 1.8rem;
+}
+
+.support h1 {
+  margin:15px 0 0 1.8rem;
+}
+
+/* icon section  */
+
+.links h1 {
+  font-size:medium;
+}
+
+
+.icons ul li {
+  margin-left: 8%;
+  padding:5px;
+}
+
+/* recipe section  */
+
+.Nigeria-page {
+  grid-template-columns: repeat(2,1fr);
+}
+
+.ninja h1 {
+  font-size:40px;
+}
+
+.card {
+  width: 100%;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.card blockquote {
+  font-size: large;
+  font-style:oblique;
+  font-weight: 600;
+}
+
+}
+
+@media screen and (max-width:480px){
+  /* once in the code  */
+  .first-img .fimg {
+    display:none;
+  }
+  /* once in the code */
+
+  /* header section */
+
+  .head h1 {
+    font-size: smaller;
+  }
+
+  .list-section a {
+    font-size: small;
+    margin: 0 0 0 15px;
+  }
+
+  /* first body section */
+
+.first-body {
+  justify-content: space-between;
+}
+
+  .first-quo {
+    width: 100%;
+    margin:60px 0 0 -1rem;
+  }
+
+  .first-quo h1 {
+    font-size:medium;
+  }
+
+  .first-quo p {
+  font-size: x-small;
+  font-weight: 600;
+}
+
+.button-sec li {
+  font-size:small;
+  width:100px;
+  padding:5px;
+}
+
+  .image-section img {
+    width:100%;
+    margin:90px 0 0 1rem;
+  }
+
+  /* second section */
+
+  .first-img img {
+    width: 90%;
+    border-radius: 30px;
+  }
+
+  .second-img img {
+    width: 90%;
+    border-radius: 30px;
+  }
+
+  /* third section  */
+
+  .third-section .img img  {
+    width: 100%;
+  }
+
+  .third-section .th-s-first-text h1 {
+    font-size: medium;
+    width: 100%;
+    margin-top:30px;
+  }
+
+  .third-section .th-s-second-text blockquote {
+    font-size: x-small;
+    font-weight: bold;
+    border: solid transparent;
+    width: 100%;
+    margin: -0.9rem 0 0 0;
+  }
+
+  /* fourth section */
+
+  .fourth-text h1 {
+    font-size:large;
+  }
+
+  .fourth-input input {
+    display:none;
+  }
+
+  .fourth-input .icon {
+    display:none;
+  }
+
+.fourth-input button {
+ position: relative;
+ top:0rem;
+ left:0rem;
+ font-size: medium;
+}
+
+/* footer section */
+
+.main-footer {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 2px;
+  background-color: rgba(208, 205, 205,0.5);
+}
+
+.name h1 {
+  font-size:medium;
+}
+
+.name blockquote {
+  font-size: xx-small;
+   width: 50%;
+   /* margin:0 0 0 -0.1rem; */
+}
+
+.about,.company,.support,.get-in-touch ul,li {
+  font-size: small;
+  margin-top: 0px;
+}
+
+.get-in-touch h1 {
+  font-size: small;
+  margin:-3rem 0 0 2rem;
+}
+
+.about h1 {
+  font-size: small;
+  margin: 20px 0 0 2rem;
+}
+
+.company h1 {
+  font-size:small;
+  margin:0 0 0 2rem;
+}
+
+.support h1 {
+  font-size:small;
+  margin:0 0 0 2rem;
+}
+
+/* icon section */
+
+.links {
+  display: flex;
+  flex-direction:column-reverse;
+  border-radius:0 0 10px 10px;
+}
+
+.links h1 {
+  font-size:xx-small;
+  text-align: center;
+}
+
+.icons ul {
+  display: flex;
+}
+
+.icons ul li {
+  margin-left:-11%;
+  padding:2px;
+}
+
+/* recipe section */
+
+.Recipe {
+  display:flex;
+  flex-direction: column;
+ }
+
+.ninja h1 {
+  font-size:25px;
+}
+
+.Nigeria-page {
+  display:grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-gap:2px;
+  align-items: start;
+  margin-top: 60px;
+}
+
+.card {
+  width:100%;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card blockquote {
+  font-size: medium;
+}
+
+.input-section input {
+  padding:12px 0 12px 35px;
+  width:300px;
+  border-radius: 20px;
+  font-size:15px;
+}
+
+
+
+}
