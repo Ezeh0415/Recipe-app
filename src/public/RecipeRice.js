@@ -38,8 +38,8 @@ const Nigeria = () => {
            <div className="input-section">
                  <input 
                  type="text" 
-                 placeholder="Search"
                  onChange={Filter}
+                 placeholder="Search"
                  /> 
                  <div className="icon"><FaCreativeCommonsSampling /></div>
               
