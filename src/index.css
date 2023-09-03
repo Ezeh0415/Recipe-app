@@ -22,7 +22,7 @@ code {
 }
 
 .head h1 {
-  color: white;
+  color:bisque;
   text-shadow:3px 3px 10px black;
 }
 
@@ -437,7 +437,104 @@ code {
   text-decoration: none;
 }
 
-/* erroe message styling start*/
+/* about page */
+
+.Aname h1 {
+  font-size:150px;
+  color:bisque;
+  text-shadow:2px 2px 10px black;
+  text-transform: capitalize;
+}
+
+.my-name {
+  display:flex;
+  justify-content:space-around;
+}
+
+.my-discription ul li {
+  color:bisque;
+  text-shadow:2px 2px 10px black;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.web-discription ul li {
+  color:bisque;
+  text-shadow:2px 2px 10px black;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.my-discription i {
+  color: black;
+}
+
+.web-discription i {
+  color:black;
+}
+
+.who-creator h1 {
+  font-size:150px;
+  color:bisque;
+  text-shadow:2px 2px 10px black;
+  text-transform: capitalize;
+}
+
+.about-creator blockquote {
+  font-size:x-large;
+  text-transform: capitalize;
+  word-spacing: 2px;
+  font-style: oblique;
+  margin: 0 0 0 50px;
+}
+
+.about-creator em {
+  color:bisque;
+  text-shadow:1px 1px 3px black;
+}
+
+.abt-site h1 {
+  font-size:150px;
+  color:bisque;
+  text-shadow:2px 2px 10px black;
+  text-transform: capitalize;
+}
+
+.about-site blockquote {
+  font-size:x-large;
+  text-transform: capitalize;
+  word-spacing: 2px;
+  font-style: oblique;
+  margin: 0 0 0 50px;
+}
+
+/* Animation for loading */
+
+@keyframes myAni {
+  from{
+    color:tomato;
+    transform: rotate(0deg);
+  }
+   to{
+    color:green;
+    transform: rotate(360deg);
+  }
+ }
+
+ /* my animation */
+
+/* erroe message styling  and pending start*/
+
+.pending-icon {
+  animation-name: myAni;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  /*animation-direction: alternate-reverse;*/
+  width: 60px;
+  margin:  10px auto;
+  font-size: xx-large;
+}
 
 .warning {
   display:grid;
@@ -459,9 +556,27 @@ code {
 
 /* error message styling end*/
 
+
+
 /* media querry */
 
 @media screen   and (min-width:500px)  and (max-width:1024px) {
+
+  /* error warrning */
+
+
+  .warning .icon {
+    font-size:3000%;
+    color:silver;
+    text-shadow: 2px 2px 10px black;
+    margin: 0 0 0 8rem;
+}
+
+/* error warning */
+
+  .App {
+    padding: 6px;
+    }
 
   /* first body  section */
 
@@ -657,9 +772,61 @@ code {
   font-weight: 600;
 }
 
+/* about me section */
+
+.Aname h1 {
+  font-size:100px;
+}
+
+.my-discription ul li {
+  font-size: 25px;
+}
+
+.web-discription ul li {
+  font-size: 25px;
+}
+
+.who-creator h1 {
+  font-size:90px;
+}
+
+.abt-site h1 {
+  font-size:100px;
+}
+
+.about-site blockquote {
+  font-size:large;
+}
+
+.about-creator blockquote {
+  font-size:large;
+}
+
 }
 
 @media screen and (max-width:480px){
+
+  /* error message  */
+
+  .warning .icon {
+    font-size:2300%;
+    color:silver;
+    text-shadow: 2px 2px 10px black;
+}
+
+.warning h1 {
+  text-align: center;
+  font-size:larger;
+  width: 250px;
+  margin:0 auto;
+}
+
+/* error message */
+
+  .App {
+    padding: 6px;
+  }
+
   /* once in the code  */
   .first-img .fimg {
     display:none;
@@ -685,7 +852,7 @@ code {
 
   .first-quo {
     width: 100%;
-    margin:60px 0 0 -1rem;
+    margin:60px 0 0 0.2rem;
   }
 
   .first-quo h1 {
@@ -704,7 +871,7 @@ code {
 }
 
   .image-section img {
-    width:100%;
+    width:90%;
     margin:90px 0 0 1rem;
   }
 
@@ -810,7 +977,7 @@ code {
 .links {
   display: flex;
   flex-direction:column-reverse;
-  border-radius:0 0 10px 10px;
+  border-radius:0 0 5px 5px;
 }
 
 .links h1 {
@@ -858,11 +1025,46 @@ code {
   font-size: medium;
 }
 
+.input-section {
+  margin: 10px auto;
+}
+
 .input-section input {
   padding:12px 0 12px 35px;
   width:300px;
   border-radius: 20px;
   font-size:15px;
+}
+
+/* about me section */
+
+.Aname h1 {
+  font-size:50px;
+}
+
+.my-discription ul li {
+  font-size: 11px;
+}
+
+.web-discription ul li {
+  font-size: 11px;
+}
+
+.who-creator h1 {
+  font-size:43px;
+}
+
+.about-creator blockquote {
+  font-size:medium;
+}
+
+.abt-site h1 {
+  font-size:50px;
+}
+
+
+.about-site blockquote {
+  font-size:medium;
 }
 
 

@@ -1,39 +1,18 @@
 import { FaCreativeCommonsSampling } from "react-icons/fa";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { PiWarningFill } from "react-icons/pi";
+import { CgLoadbar } from "react-icons/cg";
+import useFetch from "../Component/useFetch";
 
 const Nigeria = () => {
 
-    const[record,setRecord] = useState([]);
-    const[data , setData] = useState(null)
-    const[loading,setLoading] = useState(false);
-    const[error,setError] = useState(false);
-
-    useEffect(() => {
-        setLoading(true)
-        axios.get(' http://localhost:8500/recipes')
-        .then(res => {
-            setData(res.data)
-            setRecord(res.data)
-        })
-        .catch(err => {
-            setError(err)
-        })
-        .finally(() => {
-            setLoading(false)
-        })
-
-    }, [])
-
-    const Filter = (e) => {
-            setRecord(data.filter(i => i.name.toLowerCase().includes(e.target.value)));
-           }
-
+    const {record,Filter,isPending,error} = useFetch('http://localhost:8500/recipes')
 
 
     return ( 
-       <div className="ninja">
-         <div className="Recipe">
+
+    <div className="ninja">
+
+        <div className="Recipe">
            <h1>popular nigerian food recipes</h1>
            <div className="input-section">
                  <input 
@@ -45,6 +24,16 @@ const Nigeria = () => {
               
           </div>
          </div>
+
+          {isPending && <div className="pending-icon"><CgLoadbar /></div>}
+
+           { error && (
+            <div className="warning">
+               <div className="icon"> <PiWarningFill /> </div>
+               <h1>could not fetch resourse or poor internet conection </h1>
+           </div>
+            )}
+
             <div className="Nigeria-page">
 
             {record && (

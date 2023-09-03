@@ -1,6 +1,7 @@
 import useFetch from "../Component/useFetch";
 import HomeBody from "./HomeBody";
 import { PiWarningFill } from "react-icons/pi"
+import { CgLoadbar } from "react-icons/cg";
 const Home = () => {
 
 const {data:home,isPending,error} = useFetch(' http://localhost:8000/question')
@@ -10,7 +11,7 @@ const {data:home,isPending,error} = useFetch(' http://localhost:8000/question')
         <div className="main-page">
 
           <hr></hr>
-          {isPending && <h1>Loading...</h1>}
+              {isPending && <div className="pending-icon"><CgLoadbar /></div>}
               { error && (
                      <div className="warning">
                         <div className="icon"> <PiWarningFill /> </div>

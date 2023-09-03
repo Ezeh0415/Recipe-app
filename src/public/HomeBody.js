@@ -1,6 +1,7 @@
 import { FaMailBulk } from "react-icons/fa"
 import { PiWarningFill } from "react-icons/pi"
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { CgLoadbar } from "react-icons/cg";
 const Body = ({home,isPending,error}) => {
 
  
@@ -22,7 +23,7 @@ const Body = ({home,isPending,error}) => {
     return ( 
         <div className="body-section">
 
-              {isPending && <h1>Loading...</h1>}
+              {isPending && <div className="pending-icon"><CgLoadbar /></div>}
               { error && (
                      <div className="warning">
                         <div className="icon"> <PiWarningFill /> </div>
