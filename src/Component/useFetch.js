@@ -4,23 +4,28 @@ import axios from "axios";
 
     const useFetch = (url) => {
       
-        const API_KEY = "f99e5380-d541-46db-a7b8-6d200b1bc1aa";
 
         const [data, setData] = useState(null)
         const [isPending, setIsPending] = useState(false);
         const [error, setError] = useState(null)    
-        const[record,setRecord] = useState([]);   
+        const[record,setRecord] = useState([]);  
+        const apikey = "23599c93-41cc46ef-855a-910d1bf29153"; 
         
+        // const config = {
+        //   headers: {
+        //     'Authorization': 'Bearer  ${apikey} ',
+        //   }
+        // }
     
         useEffect(() => {
     
           const abortcont = new AbortController()
           
               setIsPending(true);
-              axios.get(url, {
-                // params: {
-                //   api_key:API_KEY
-                // },
+              axios.get(url , {
+                params: {
+                  api_key:apikey
+                }
               })
 
               .then(res => {

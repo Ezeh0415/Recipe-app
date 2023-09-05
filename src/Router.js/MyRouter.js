@@ -5,6 +5,7 @@ import useFetch from "../Component/useFetch";
 import Footer from '../public/Footer';
 import Recipe from '../public/Recipe';
 import About from '../public/About';
+import Contact from '../public/contact';
 const MyRouter = () => {
 
     const {data:home,isPending,error} = useFetch(' http://localhost:8000/question')
@@ -27,6 +28,9 @@ const MyRouter = () => {
                       </Route>
                       <Route exact path="/About">
                           <About />
+                      </Route>
+                      <Route exact path="/Contact">
+                          <Contact />
                       </Route>
                  </Switch>
               <div className="footer">
