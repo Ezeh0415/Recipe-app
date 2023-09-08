@@ -386,7 +386,7 @@ code {
 .Nigeria-page {
   display:grid;
   grid-template-columns: repeat(3,1fr);
-  grid-gap: 10px;
+  grid-gap: 15px;
   align-items: start;
   margin-top: 60px;
 }
@@ -395,7 +395,7 @@ code {
   display: flex;
   
   justify-content: space-evenly;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 
 .card {
@@ -404,6 +404,7 @@ code {
    width: 600px;
    height: auto;
    border-radius: 20px;
+   margin-top:0px;
 }
 
 .card img {
@@ -605,7 +606,7 @@ code {
   text-transform: capitalize;
   font-size: xx-large;
   border: solid 1px;
-  padding: 10px;
+  padding: 5px;
   border-radius: 10px;
   color: bisque;
   text-shadow: 2px 2px 5px black;

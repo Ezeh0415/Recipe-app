@@ -1,14 +1,12 @@
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import Home from '../public/Home';
 import Header from "../public/MainHeader";
-import useFetch from "../Component/useFetch";
 import Footer from '../public/Footer';
-import Recipe from '../public/Recipe';
 import About from '../public/About';
 import Contact from '../public/contact';
+import Nigeria from '../public/RecipeRice';
+import Body from '../public/HomeBody';
 const MyRouter = () => {
 
-    const {data:home,isPending,error} = useFetch(' http://localhost:8000/question')
     return ( 
         <div className="router-page">
 
@@ -17,14 +15,14 @@ const MyRouter = () => {
              <Router>
                
               <div className="header">
-               {  <Header  isPending={isPending} error={error}/>}
+                 <Header />
               </div>
                  <Switch>
                       <Route exact path="/">
-                          <Home/>
+                          <Body />
                       </Route>
                       <Route exact path="/Recipe">
-                          <Recipe />
+                          <Nigeria />
                       </Route>
                       <Route exact path="/About">
                           <About />
