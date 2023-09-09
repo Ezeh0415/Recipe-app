@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import RecipeRice from "./RecipeRice";
 const Header = () => {
 
 
@@ -9,7 +8,7 @@ const Header = () => {
     return ( 
         <div className="header-section">
             <div className="head">
-                <h1>Dark Cloud Recipe</h1>
+                <h1>D.Cloud Recipes</h1>
             </div>
             <div className="list-section">
                 <ul>
@@ -19,10 +18,6 @@ const Header = () => {
                     <Link to="/Contact">Contact</Link>
                 </ul>
             </div>
-            
-
-         
-           
         </div>
      );
 }

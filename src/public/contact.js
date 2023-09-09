@@ -3,7 +3,7 @@ import { LuHelpingHand } from "react-icons/lu"
 const Contact = () => {
     return ( 
         <div className="contact">
-            <hr />
+            
             <div className="main-contacts">
                   <div className="contact-card">
                     <h2><AiFillWechat /></h2>

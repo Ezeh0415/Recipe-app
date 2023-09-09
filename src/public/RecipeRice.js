@@ -2,6 +2,7 @@ import { FaCreativeCommonsSampling } from "react-icons/fa";
 import { PiWarningFill } from "react-icons/pi";
 import { CgLoadbar } from "react-icons/cg";
 import { useState , useEffect } from "react";
+import Mainsearch from "./MainSearch";
 
 const Nigeria = () => {
 
@@ -11,11 +12,12 @@ const Nigeria = () => {
     const [error , setError] = useState(false)
     const [loading, setIsLoading] = useState(true)
     const[record,setRecord] = useState([]);
+    const [querry , setQuerry] = useState('');
     const apiKey = '830f2955-ec4d-4f19-ba49-d83eaecfdb92';
   
     useEffect(() => {
       // Define the API URL
-      const apiUrl = `https://forkify-api.herokuapp.com/api/v2/recipes?search=rice&key=${apiKey}`;
+      const apiUrl = `https://forkify-api.herokuapp.com/api/v2/recipes?search=${querry}&key=${apiKey}`;
   
       // Fetch data from the API
       fetch(apiUrl)
@@ -30,12 +32,12 @@ const Nigeria = () => {
           setError(error)
           setIsLoading(false)
         });
-    }, []);
+    }, [querry]);
 
 
     
     const [CurrentPage, setCurrentPage] = useState(1);
-    const recordsPerPage = 10;
+    const recordsPerPage = 15;
     const lastIndex = CurrentPage * recordsPerPage;
     const firstIndex = lastIndex - recordsPerPage;
     const records = record.slice(firstIndex,lastIndex);
@@ -47,6 +49,10 @@ const Nigeria = () => {
     const Filter = (e) => {
         //setRecord(recipes.filter(f => f.title.toLowerCase().includes(e.target.value)));
         setRecord(recipes.filter(f => f.title.toLowerCase().includes(e.target.value.toLowerCase())));
+       }
+
+       const fullSearch = (e) => {
+        setQuerry(e.target.value.toLowerCase());
        }
 
     return ( 
@@ -73,7 +79,7 @@ const Nigeria = () => {
                     <input 
                     type="text" 
                     onChange={Filter}
-                    placeholder="Search"
+                    placeholder="individual food search"
                     /> 
                     <div className="icon"><FaCreativeCommonsSampling /></div>
                 
@@ -113,6 +119,7 @@ const Nigeria = () => {
                     </li>
                 </ul>
                 </nav>
+                  <Mainsearch  fullSearch={fullSearch}/>
                 </>
             )}  
        </div>

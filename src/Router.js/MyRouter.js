@@ -16,6 +16,7 @@ const MyRouter = () => {
                
               <div className="header">
                  <Header />
+                 <hr></hr>
               </div>
                  <Switch>
                       <Route exact path="/">

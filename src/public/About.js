@@ -1,7 +1,6 @@
 const About = () => {
     return ( 
         <div className="about-sections">
-            <hr/>
             <div className="Aname">
                 <h1>so who am i</h1>
             </div>
@@ -25,7 +24,7 @@ const About = () => {
                 <div className="who-creator">
                     <h1>who is the Creator</h1>
                 </div>
-                <blockquote>my name is ezeanwe .c. godwin aka shadow and an upcoming front end web developer with the knowledge of html css javascript bootstrap5 and now adding react to the list as one of the many achivement i have made so far this year and on the way i met some helpfull brothers that helped me through rough times by name <em>emmanuel adiele</em> and my mentor now that gave his time helping me break throug though times and molowed down to help me <em>gee editor</em> so far so i owe two of them thanks for my achivements but the whole thakns go to my perents for the great surpport and love they gave me and mostly lets not forget the great groupe were i met my two mentors <a href="/">better dev</a> allthough i not chatting activly i normally get points just from the topic of each day from there. lastly i give my utomost respect to god almighty that with out him non of this would not be achivable thank you lord and thanks alot guys     </blockquote>
+                <blockquote>my name is ezeanwe .c. godwin aka shadow and an upcoming front end web developer with the knowledge of html css javascript bootstrap5 and now adding react to the list as one of the many achivement i have made so far this year and on the way i met some helpfull brothers that helped me through rough times by name <em>emmanuel adiele</em> and my mentor now that gave his time helping me break throug though times and molowed down to help me <em>gee editor</em> so far so i owe two of them thanks for my achivements but the whole thakns go to my perents for the great surpport and love they gave me and mostly lets not forget the great groupe were i met my two mentors <a href="https://chat.whatsapp.com/K2mYhvrytiD1RLtEiF4rDX"target="_blank">better dev</a> allthough i not chatting activly i normally get points just from the topic of each day from there. lastly i give my utomost respect to god almighty that with out him non of this would not be achivable thank you lord and thanks alot guys     </blockquote>
             </div>
             <div className="about-site">
                 <div className="abt-site">
