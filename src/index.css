@@ -379,8 +379,8 @@ code {
   text-align: center;
   font-size:55px;
   font-style: oblique;
-  color: green;
-  text-shadow:3px 3px 5px black;
+  color:green;
+  text-shadow:1px 1px 3px black;
 }
 
 .Nigeria-page {
@@ -395,7 +395,7 @@ code {
   display: flex;
   
   justify-content: space-evenly;
-  margin-top: 0px;
+  margin-top: 20px;
 }
 
 .card {
@@ -670,6 +670,8 @@ code {
   font-size:xx-large;
   font-style: oblique;
   font-weight: bolder;
+  color:black;
+  text-shadow:none;
 }
 
 /* error message styling end*/

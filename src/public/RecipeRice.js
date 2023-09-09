@@ -45,7 +45,8 @@ const Nigeria = () => {
 
    
     const Filter = (e) => {
-        setRecord(recipes.filter(f => f.title.toLowerCase().includes(e.target.value)));
+        //setRecord(recipes.filter(f => f.title.toLowerCase().includes(e.target.value)));
+        setRecord(recipes.filter(f => f.title.toLowerCase().includes(e.target.value.toLowerCase())));
        }
 
     return ( 
