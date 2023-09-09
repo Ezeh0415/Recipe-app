@@ -615,6 +615,8 @@ code {
   padding: 5px;
   border-radius: 10px;
   color: bisque;
+    text-shadow: 2px 2px 5px black;
+    box-shadow: 2px 2px 5px black;
 }
 
 .pagination-num {

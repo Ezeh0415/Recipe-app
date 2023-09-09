@@ -107,7 +107,7 @@ const Nigeria = () => {
                     <li className="page-item">
                         <a href="#" className="page-link" onClick={prevPage}>Prev</a>
                     </li>
-                        <span className="pagination-num">
+                        {/* <span className="pagination-num">
                          {
                                 number.map((n,i) => (
                                         <li className={ ` page item ${CurrentPage === n ? 'active' : '' } `} key={i}>
@@ -115,7 +115,7 @@ const Nigeria = () => {
                                         </li>
                                     ))
                             }  
-                        </span>
+                        </span> */}
                     <li className="page-item">
                         <a href="#" className="page-link" onClick={nextPage}>Next</a>
                     </li>
