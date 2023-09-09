@@ -107,13 +107,15 @@ const Nigeria = () => {
                     <li className="page-item">
                         <a href="#" className="page-link" onClick={prevPage}>Prev</a>
                     </li>
-                    {
-                        number.map((n,i) => (
-                            <li className={ ` page item ${CurrentPage === n ? 'active' : '' } `} key={i}>
-                                <a href="#" className="page-link" onClick={() => changeCpage (n)}  >{n}</a>
-                            </li>
-                        ))
-                    }
+                        <span className="pagination-num">
+                         {
+                                number.map((n,i) => (
+                                        <li className={ ` page item ${CurrentPage === n ? 'active' : '' } `} key={i}>
+                                            <a href="#" className="page-link" onClick={() => changeCpage (n)}  >{n}</a>
+                                        </li>
+                                    ))
+                            }  
+                        </span>
                     <li className="page-item">
                         <a href="#" className="page-link" onClick={nextPage}>Next</a>
                     </li>

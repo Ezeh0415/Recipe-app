@@ -619,6 +619,10 @@ code {
   box-shadow: 2px 2px 10px black;
 }
 
+.pagination-num {
+  display:flex;
+}
+
 
 /* animation for contact */
 @keyframes mycontact {
@@ -679,6 +683,16 @@ code {
   color:black;
   text-shadow:none;
 }
+
+.desktop{
+  display:block;
+ }
+ .tablet{
+  display:none;
+ }
+ .mobile{
+  display:none;
+ }
 
 /* error message styling end*/
 
@@ -942,6 +956,16 @@ code {
   .just-chat blockquote {
      text-align: center;
   }
+
+  .desktop{
+    display:none;
+   }
+   .tablet{
+    display:block;
+   }
+   .mobile{
+    display:none;
+   }
 
 }
 
@@ -1238,7 +1262,125 @@ code {
     border-radius: 5px;
   }
 
+  .desktop{
+    display:none;
+   }
+   .tablet{
+    display:none;
+   }
+   .mobile{
+    display:block;
+   }
+
 }
 
+@media screen and (max-width:280px) {
+  .list-section ul a {
+    font-size:x-small;
+    margin:0 0 0 8px;
+  }
+ /* first section */
+  .first-quo h1 {
+    font-size:small;
+  }
+
+  /* second section */
+  .s-b-first-quo h1 {
+    font-size:large;
+  }
+
+  .s-b-second-quo p {
+    font-size:small;
+  }
+
+  /* third section */
+
+  .th-s-first-text i {
+    display:none;
+  }
+  /* about me section */
+
+  .Aname h1 {
+    font-size:x-large;
+  }
+
+  .my-discription ul li {
+     font-size:7px;
+  }
+
+  .web-discription ul li {
+    font-size:7px;
+  }
+
+  .who-creator h1 {
+    font-size:x-large;
+  }
+
+  .about-creator blockquote {
+    font-size:x-small;
+  }
+
+  .abt-site h1 {
+    font-size:x-large;
+  }
+
+  .about-site blockquote {
+    font-size:x-small;
+  }
+
+  /* recipe section */
+
+  .pagination-num {
+     display:none;
+   }
+
+   .Recipe h1 {
+    font-size:large;
+   }
+
+  .input-section input {
+    padding:12px 0 12px 35px;
+    margin-left:-1rem;
+    width:100%;
+    border-radius: 20px;
+    font-size:15px;
+  }
+
+   .input-section ::placeholder {
+    font-size:small;
+   }
+
+   /* contact */
+
+   .contact-card h1 {
+    font-size:large;
+   }
+   
+   .contact-card blockquote {
+    font-size:medium;
+   }
+
+   .text-icon a{
+    font-size:medium;
+   }
+
+   .just-chat H1 {
+    font-size:large
+   }
+
+   .just-chat blockquote {
+    font-size:x-small;
+   }
 
 
+   .desktop{
+    display:none;
+   }
+   .tablet{
+    display:none;
+   }
+   .mobile{
+    display:block;
+   }
+
+}
