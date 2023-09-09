@@ -72,7 +72,7 @@ const Nigeria = () => {
                  </div> 
                  ):(
             <>
-            
+             <Mainsearch  fullSearch={fullSearch}/>
                 <div className="Recipe">
                 <h1>popular nigerian food recipes</h1>
                 <div className="input-section">
@@ -119,7 +119,7 @@ const Nigeria = () => {
                     </li>
                 </ul>
                 </nav>
-                  <Mainsearch  fullSearch={fullSearch}/>
+                 
                 </>
             )}  
        </div>
