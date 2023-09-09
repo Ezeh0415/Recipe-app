@@ -608,7 +608,7 @@ code {
 }
 
 .page-link {
-  text-decoration: none;
+  /* text-decoration: none;
   text-transform: capitalize;
   font-size: xx-large;
   border: solid 1px;
@@ -616,7 +616,7 @@ code {
   border-radius: 10px;
   color: bisque;
   text-shadow: 2px 2px 5px black;
-  box-shadow: 2px 2px 10px black;
+  box-shadow: 2px 2px 10px black; */
 }
 
 .pagination-num {
