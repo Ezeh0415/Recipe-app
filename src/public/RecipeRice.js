@@ -1,8 +1,18 @@
-import { FaCreativeCommonsSampling } from "react-icons/fa";
+import { FaHeart,FaCreativeCommonsSampling } from "react-icons/fa";
 import { PiWarningFill } from "react-icons/pi";
 import { CgLoadbar } from "react-icons/cg";
 import { useState , useEffect } from "react";
 import Mainsearch from "./MainSearch";
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import IconButton, { IconButtonProps } from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Avatar from '@mui/material/Avatar';
+import { teal } from '@mui/material/colors';
+import Masonry from 'react-masonry-css'
+import Grid from "@mui/system/Unstable_Grid/Grid";
 
 const Nigeria = () => {
 
@@ -13,6 +23,11 @@ const Nigeria = () => {
     const [loading, setIsLoading] = useState(true)
     const[record,setRecord] = useState([]);
     const [querry , setQuerry] = useState('');
+    const points = {
+        default:3,
+        1024:2,
+        500:1
+    }
     const apiKey = '830f2955-ec4d-4f19-ba49-d83eaecfdb92';
   
     useEffect(() => {
@@ -57,7 +72,7 @@ const Nigeria = () => {
 
     return ( 
 
-    <div className="ninja">
+       <div className="ninja">
 
         { loading ? (
         
@@ -74,32 +89,70 @@ const Nigeria = () => {
             <>
              <Mainsearch  fullSearch={fullSearch}/>
                 <div className="Recipe">
-                <h1>popular nigerian food recipes</h1>
+                <h1>popular foods recipes</h1>
                 <div className="input-section">
                     <input 
                     type="text" 
                     onChange={Filter}
                     placeholder="individual food search"
-                    /> 
-                    <div className="icon"><FaCreativeCommonsSampling /></div>
+                     id="input"
+                     /> 
+                    <div className="icon" id="icon"><FaCreativeCommonsSampling /></div>
                 
             </div>
             </div>
 
                 <div className="Nigeria-page">
-                
+            <Masonry 
+             breakpointCols={points}
+             className="my-masonry-grid"
+             columnClassName="my-masonry-grid_column"
+            >
+            
                 {record && (
                     records.map((item, index) => (
                     <div key={index}>
-                    <div className="cards">
+                       
+                       <Card elevation={3}>
+                        <CardHeader
+                                        avatar={
+                                        <Avatar sx={{ bgcolor: teal[500] }} aria-label="recipe">
+                                            {item.title[0]}
+                                        </Avatar>
+                                        }
+                                        action={
+                                        <IconButton aria-label="settings">
+                                            <FaHeart />
+                                        </IconButton>
+                                        }
+                                        title={<span style={{ fontSize: 'large' }}>{item.title}</span>}
+                                        subheader={item.id}
+                                    />
+                            <CardMedia
+                                        component="img"
+                                        image={item.image_url}
+                                        alt="foods"
+                                    />
+                            <CardContent>
+                                    <Typography variant="h5" color='textSecondary'>
+                                        Created by {item.publisher}
+                                    </Typography>
+                            </CardContent>
+                       </Card>
+
+                    {/* <div className="cards">
                         <div className="card">
                             <img src={item.image_url} alt="food-picture" />
                             <h1>{item.title}</h1>
                             <blockquote>Created by {item.publisher}</blockquote>
                         </div>
-                    </div>
-                    </div>
-            )))}
+                    </div> */}
+
+                    
+                </div>
+                
+               )))}
+           </Masonry>
                     
                 </div>
                 <nav className="mav">

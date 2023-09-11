@@ -1,4 +1,5 @@
 import MyRouter from "./Router.js/MyRouter";
+import './scss/main.scss';
 import {browserRouter as Router, Route, Switch} from 'react-router-dom'
 
 function App() {

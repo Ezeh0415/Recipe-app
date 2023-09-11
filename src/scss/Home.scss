@@ -1,0 +1,326 @@
+// varables
+$flex:flex;
+$space:space-around;
+$secondary:green;
+$black:black;
+$lists:none;
+$font:X-large;
+$bgcolor:rgba(208, 205, 205,0.5);
+
+//codes
+
+.header-section {
+    display: $flex;
+    justify-content: $space;
+    h1 {
+        color:$secondary;
+    }
+}
+
+.list-section {
+    ul {
+        display: $flex;
+        justify-content: $space;
+    }
+    a {
+        display: $flex;
+        font-size: $font;
+        color:$black;
+        text-decoration: none;
+        margin: 20px;
+    }
+}
+
+.first-body {
+    display: $flex;
+    justify-content: $space;
+    margin-bottom: 20px;
+    .first-quo {
+        margin: 85px 0 0 50px;
+        border: solid transparent;
+        width: 600px;
+    }
+    h1 {
+        font-size:80px;
+    }
+    p {
+        font-size: 27px;
+        font-weight: 500;
+    }
+}
+
+.button-sec {
+    Button{
+        padding: 15px;
+        background-color:$secondary;
+        border-radius: 10px;
+    }
+}
+
+.image-section {
+    img {
+        width: 800px;
+        border-radius:40px;
+        margin:80px 0 0  30px;
+        box-shadow: 2px 6px 20px black;
+    }
+}
+
+// second body
+
+.second-body {
+    margin-top: 70px;
+    background-color:$bgcolor;
+    h1{
+        text-align: center;
+        color: $secondary;
+        font-size: 80px;
+    }
+    p{
+        text-align: center;
+        font-size: 25px;
+    }
+    img {
+        width:100%;
+    }
+}
+
+// third body
+
+.third-section {
+    display: $flex;
+    justify-content: $space;
+    margin-top: 5;
+    img {
+        width: 400px;
+    }
+    i{
+        font-size: medium;
+        font-weight: 800;
+        font-style: oblique;
+        background-color: rgb(184, 247, 184);
+        color: $secondary;
+        padding: 10px;
+        border-radius: 30px;
+    }
+    .th-s-first-text {
+        margin: 8% 0;
+        h1{
+            font-size: 80px;
+            border: solid transparent;
+            width: 900px;
+            margin-top: -0.8rem;
+        }
+        blockquote {
+            font-size: 30px;
+            font-weight: bold;
+            border: solid transparent;
+            width: 750px;
+            margin: -0.9rem 0 0 0;
+        }
+        Button {
+            border: solid green;
+            font-size: large;
+            font-weight: 900;
+            font-style: oblique;
+            background-color: green;
+            color: white;
+            padding:5px;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+      }
+}
+ 
+.fourth-section {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    padding-bottom: 15%;
+    h1{
+        font-size: 90px;
+        color: whitesmoke;
+        text-shadow: 2px 2px 10px black;
+        font-style: oblique;
+        text-transform: capitalize;
+    }
+    button {
+        padding: 13px;
+        font-size: x-large;
+        border-radius: 10px;
+        background-color:green;
+    }
+    .fourth-text {
+        padding-top: 25%;
+      }
+}
+
+@media screen   and (min-width:500px)  and (max-width:1024px) {
+    .header-section {
+        display: $flex;
+        justify-content: $space;
+        h1 {
+            color:$secondary;
+        }
+    }
+    .image-section {
+        img {
+            width: 90%;
+        }
+    }
+    .first-body {
+        .first-quo {
+            margin:80px 0 0  5px;
+        }
+        h1 {
+            font-size:50px;
+        }
+        p {
+            font-size: 23px;
+        }
+    }
+    // second body 
+
+    .second-body {
+        img {
+            width:100%;
+        }
+    }
+
+    // third body
+
+    .third-section {
+        display: $flex;
+        justify-content: $space;
+        margin-top: 5;
+        img {
+            width: 100%;
+        }
+        .th-s-first-text {
+            h1{
+                font-size: 30px;
+                border: solid transparent;
+                width: 350px;
+                margin-top: 10px;
+            }
+            blockquote {
+                font-size: 20px;
+                width: 550px;
+            }
+          }
+    }
+}
+
+// mobile section 
+
+@media screen and (max-width:480px) {
+    .header-section {
+        display: $flex;
+        justify-content: $space;
+        h1 {
+            color:$secondary;
+        }
+    }
+
+    .list-section {
+        ul {
+            display: $flex;
+            justify-content: $space;
+        }
+        a {
+            display: $flex;
+            font-size: small;
+            color:$black;
+            text-decoration: none;
+            margin: -3px 0 0 9px;
+        }
+    }
+
+    .image-section {
+        img {
+            width: 100%;
+            margin:120px 0 0  5px;
+        }
+    }
+    .first-body {
+        .first-quo {
+            margin:80px 0 0  5px;
+        }
+        h1 {
+            font-size:20px;
+        }
+        p {
+            font-size: 10px;
+        }
+    }
+
+    .button-sec {
+        Button{
+            padding: 5px;
+        }
+    }
+
+    // second body 
+
+    .second-body {
+        img {
+            width: 100%;
+        }
+        h1{
+            font-size: 30px;
+        }
+        p{
+            text-align: center;
+            font-size: 18px;
+        }
+    }
+
+    // third section 
+
+    .third-section {
+        margin-top: 5;
+        img {
+            width: 100%;
+        }
+        .th-s-first-text {
+            h1{
+                font-size: 20px;
+                border: solid transparent;
+                width: 210px;
+                margin-top: 10px;
+            }
+            blockquote {
+                font-size: 13px;
+                width: 210px;
+            }
+          }
+    }
+
+    // fourth section 
+    .fourth-section {
+        border-radius: 20px;
+        padding-bottom: 15%;
+        h1{
+            font-size: 40px;
+        }
+        button {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:280px) {
+    .second-body {
+        img {
+            width: 90%;
+        }
+        h1{
+            font-size: 20px;
+        }
+        p{
+            text-align: center;
+            font-size: 15px;
+        }
+    }
+}
