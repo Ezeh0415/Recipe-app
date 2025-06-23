@@ -2,45 +2,96 @@ import { AiFillWechat , AiTwotoneMail,AiOutlineCaretRight} from "react-icons/ai"
 import { LuHelpingHand } from "react-icons/lu"
 const Contact = () => {
     return ( 
-        <div className="contact">
-            
-            <div className="main-contacts">
-                  <div className="contact-card">
-                    <h2><AiFillWechat /></h2>
-                    <h1>chat support</h1>
-                    <blockquote>our chat team is just a click away</blockquote>
-                     <div className="text-icon">
-                         <h3><a href="/">chat now </a></h3>
-                         <i><AiOutlineCaretRight /></i>
-                     </div>
+        <div className="contact bg-white py-12 px-4 lg:px-16 text-green-800">
+  {/* Contact Options */}
+  <div className="main-contacts grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+    {/* Chat Support */}
+<div className="contact-card bg-white border border-green-200 rounded-xl p-6 shadow-sm hover:shadow-md transition duration-300">
+  <div className="flex items-center justify-center w-14 h-14 bg-green-100 text-green-600 rounded-full mb-4 text-3xl mx-auto">
+    <AiFillWechat />
+  </div>
+  <h2 className="text-center text-xl font-semibold text-green-700 mb-2">
+    Chat Support
+  </h2>
+  <p className="text-center text-sm text-gray-600 mb-4 px-2">
+    Our chat team is just a click away to help you with any questions.
+  </p>
+  <div className="flex items-center justify-center text-green-600 hover:text-green-800">
+    <a
+      href="/"
+      className="flex items-center gap-1 font-medium text-sm hover:underline"
+    >
+      Chat now <AiOutlineCaretRight className="mt-0.5" />
+    </a>
+  </div>
+</div>
 
-                  </div>
+{/* Email Support */}
+<div className="contact-card bg-white border border-green-200 rounded-xl p-6 shadow-sm hover:shadow-md transition duration-300">
+  <div className="flex items-center justify-center w-14 h-14 bg-green-100 text-green-600 rounded-full mb-4 text-3xl mx-auto">
+    <AiTwotoneMail />
+  </div>
+  <h2 className="text-center text-xl font-semibold text-green-700 mb-2">
+    Email Support
+  </h2>
+  <p className="text-center text-sm text-gray-600 mb-4 px-2">
+    Prefer email? Send us a message and we’ll reply shortly.
+  </p>
+  <div className="flex items-center justify-center text-green-600 hover:text-green-800">
+    <a
+      href="/"
+      className="flex items-center gap-1 font-medium text-sm hover:underline"
+    >
+      Send email <AiOutlineCaretRight className="mt-0.5" />
+    </a>
+  </div>
+</div>
 
-                  <div className="contact-card">
-                    <h2><AiTwotoneMail /></h2>
-                    <h1>email support</h1>
-                    <blockquote>prefer email? you can send us an email and we'll get back to you soon</blockquote>
-                      <div className="text-icon">
-                      <h3><a href="/">send email </a></h3>
-                       <i><AiOutlineCaretRight /></i>
-                      </div>
-                  </div>
 
-                  <div className="contact-card">
-                    <h2><LuHelpingHand /></h2>
-                    <h1>help center</h1>
-                    <blockquote>our self-service help center is open 24/7 with 150 + article to help</blockquote>
-                       <div className="text-icon">
-                          <h3><a href="/">visit help center </a></h3>
-                          <i><AiOutlineCaretRight /></i>
-                       </div>
-                  </div>
-            </div>
-              <div className="just-chat">
-                 <h1>how we reply</h1>
-                 <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ullam ipsa, quis dolorum enim laudantium. Hic delectus perferendis voluptatibus adipisci optio! Impedit unde blanditiis veritatis. Magni esse impedit recusandae earum id, non explicabo est debitis veniam rerum nesciunt hic enim, provident unde minus pariatur quae quas iure molestiae blanditiis eos! Nam dolore libero nulla itaque repellat nobis molestiae in, cum aperiam sapiente dignissimos unde incidunt excepturi molestias. Cumque laboriosam beatae eveniet provident tempore, vel, doloribus at libero laudantium debitis quia ipsam laborum commodi ipsum, vitae architecto perspiciatis excepturi repellat tempora reprehenderit maiores fugit. Eaque iste itaque explicabo enim cum labore recusandae! Delectus quo tempore quod optio modi, dolorem numquam, necessitatibus aspernatur adipisci quibusdam tenetur temporibus sed, voluptate autem ex consectetur expedita assumenda vero corrupti! Nesciunt, numquam. Harum sunt fuga adipisci iste beatae id magni est similique, voluptatem maxime nihil consequuntur ducimus dolor ea doloremque deleniti facilis deserunt repudiandae, velit, ex inventore odio eveniet fugiat! Eos perferendis libero soluta animi magnam voluptatibus, at dolor ex inventore accusantium facilis exercitationem illum vel repellat tenetur veritatis vitae tempora cupiditate incidunt deleniti expedita sed. Iusto beatae, aut excepturi nam nulla, omnis consequuntur vitae non velit ullam sunt perspiciatis odit vero magni libero aperiam placeat?</blockquote>
-              </div>
-        </div>
+    {/* Help Center */}
+   <div className="contact-card bg-white border border-green-200 rounded-xl p-6 shadow-sm hover:shadow-md transition duration-300">
+  {/* Icon */}
+  <div className="flex items-center justify-center w-14 h-14 bg-green-100 text-green-600 rounded-full mb-4 text-3xl mx-auto">
+    <LuHelpingHand />
+  </div>
+
+  {/* Title */}
+  <h2 className="text-center text-xl font-semibold text-green-700 mb-2">
+    Help Center
+  </h2>
+
+  {/* Description */}
+  <p className="text-center text-sm text-gray-600 mb-4 px-2">
+    Our Help Center is available 24/7 with over 150+ helpful articles to guide you through anything.
+  </p>
+
+  {/* CTA */}
+  <div className="flex items-center justify-center text-green-600 hover:text-green-800">
+    <a
+      href="/"
+      className="flex items-center gap-1 font-medium text-sm hover:underline"
+    >
+      Visit Help Center <AiOutlineCaretRight className="mt-0.5" />
+    </a>
+  </div>
+</div>
+
+  </div>
+
+  {/* How We Reply */}
+ <div className=" max-w-3xl mx-auto bg-green-50 rounded-lg shadow-md p-6 md:p-10 my-12">
+  <h2 className="text-2xl md:text-3xl font-semibold text-green-700 mb-4 text-center">
+    How We Reply
+  </h2>
+  <p className="text-gray-700 leading-relaxed text-base md:text-lg text-justify">
+    We take every message seriously. Whether it's a chat, email, or help center request,
+    our dedicated support team is here to assist you with fast and friendly responses.
+    We aim to respond within a few hours, and provide clear, helpful guidance so you're
+    never left stuck. Our support is active 7 days a week — because your experience matters.
+  </p>
+</div>
+
+</div>
      );
 }
  

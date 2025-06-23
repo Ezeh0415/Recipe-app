@@ -88,92 +88,103 @@ const Nigeria = () => {
                  ):(
             <>
              <Mainsearch  fullSearch={fullSearch}/>
-                <div className="Recipe">
-                <h1>popular foods recipes</h1>
-                <div className="input-section">
-                    <input 
-                    type="text" 
-                    onChange={Filter}
-                    placeholder="individual food search"
-                     id="input"
-                     /> 
-                    <div className="icon" id="icon"><FaCreativeCommonsSampling /></div>
-                
-            </div>
-            </div>
+               <div className="Recipe max-w-xl mx-auto p-6">
+  <h1 className="text-3xl font-bold text-green-600 mb-6">
+    Popular Food Recipes
+  </h1>
+  <div className="input-section relative">
+    <input
+      type="text"
+      onChange={Filter}
+      placeholder="Search for individual food"
+      id="input"
+      className="w-full border border-green-400 rounded-md py-2 pl-4 pr-10 text-green-900 placeholder-green-400 focus:outline-none focus:ring-2 focus:ring-green-500"
+    />
+    
+  </div>
+</div>
 
-                <div className="Nigeria-page">
-            <Masonry 
-             breakpointCols={points}
-             className="my-masonry-grid"
-             columnClassName="my-masonry-grid_column"
-            >
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+           
             
                 {record && (
                     records.map((item, index) => (
                     <div key={index}>
-                       
-                       <Card elevation={3}>
-                        <CardHeader
-                                        avatar={
-                                        <Avatar sx={{ bgcolor: teal[500] }} aria-label="recipe">
-                                            {item.title[0]}
-                                        </Avatar>
-                                        }
-                                        action={
-                                        <IconButton aria-label="settings">
-                                            <FaHeart />
-                                        </IconButton>
-                                        }
-                                        title={<span style={{ fontSize: 'large' }}>{item.title}</span>}
-                                        subheader={item.id}
-                                    />
-                            <CardMedia
-                                        component="img"
-                                        image={item.image_url}
-                                        alt="foods"
-                                    />
-                            <CardContent>
-                                    <Typography variant="h5" color='textSecondary'>
-                                        Created by {item.publisher}
-                                    </Typography>
-                            </CardContent>
-                       </Card>
-
-                    {/* <div className="cards">
-                        <div className="card">
-                            <img src={item.image_url} alt="food-picture" />
-                            <h1>{item.title}</h1>
-                            <blockquote>Created by {item.publisher}</blockquote>
+                        <div className="max-w-sm bg-white rounded-xl shadow-md overflow-hidden border border-green-100 hover:shadow-lg transition">
+                        {/* Header */}
+                        <div className="flex items-center justify-between p-4">
+                            <div className="flex items-center space-x-3">
+                            <div className="w-10 h-10 rounded-full bg-teal-500 flex items-center justify-center text-white font-bold text-lg">
+                                {item.title[0]}
+                            </div>
+                            <span className="text-lg font-semibold text-green-700">{item.title}</span>
+                            </div>
+                            <button className="text-red-500 hover:text-red-600">
+                            <FaHeart />
+                            </button>
                         </div>
-                    </div> */}
 
-                    
+                        {/* Image */}
+                        <img
+                            src={item.image_url}
+                            alt="foods"
+                            className="w-full h-48 object-cover border-t border-b"
+                        />
+
+                        {/* Footer */}
+                        <div className="p-4">
+                            <p className="text-sm text-gray-600">
+                            Created by <span className="font-semibold text-green-600">{item.publisher}</span>
+                            </p>
+                        </div>
+                        </div>
+
                 </div>
                 
                )))}
-           </Masonry>
+           
                     
                 </div>
-                <nav className="mav">
-                <ul className="pagnation">
-                    <li className="page-item">
-                        <a href="#" className="page-link" onClick={prevPage}>Prev</a>
-                    </li>
-                        {/* <span className="pagination-num">
-                         {
-                                number.map((n,i) => (
-                                        <li className={ ` page item ${CurrentPage === n ? 'active' : '' } `} key={i}>
-                                            <a href="#" className="page-link" onClick={() => changeCpage (n)}  >{n}</a>
-                                        </li>
-                                    ))
-                            }  
-                        </span> */}
-                    <li className="page-item">
-                        <a href="#" className="page-link" onClick={nextPage}>Next</a>
-                    </li>
-                </ul>
-                </nav>
+                <nav className="my-6">
+  <ul className="flex items-center justify-center gap-2">
+    {/* Prev Button */}
+    <li>
+      <button
+        onClick={prevPage}
+        className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition"
+      >
+        Prev
+      </button>
+    </li>
+
+    {/* Page Numbers */}
+    {number.map((n, i) => (
+      <li key={i}>
+        <button
+          onClick={() => changeCpage(n)}
+          className={`px-3 py-1 rounded border ${
+            CurrentPage === n
+              ? "bg-green-600 text-white"
+              : "bg-white text-green-600 border-green-400 hover:bg-green-100"
+          } transition`}
+        >
+          {n}
+        </button>
+      </li>
+    ))}
+
+    {/* Next Button */}
+    <li>
+      <button
+        onClick={nextPage}
+        className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition"
+      >
+        Next
+      </button>
+    </li>
+  </ul>
+</nav>
+
                  
                 </>
             )}  
