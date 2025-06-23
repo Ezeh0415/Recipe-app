@@ -90,7 +90,7 @@ const Nigeria = () => {
             {record &&
               records.map((item, index) => (
                 <div key={index}>
-                  <div className="max-w-sm bg-white rounded-xl shadow-md overflow-hidden border border-green-100 hover:shadow-lg transition">
+                  <div className="mx-2 bg-white rounded-xl shadow-md overflow-hidden border border-green-100 hover:shadow-lg transition">
                     {/* Header */}
                     <div className="flex items-center justify-between p-4">
                       <div className="flex items-center space-x-3">

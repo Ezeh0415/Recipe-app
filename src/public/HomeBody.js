@@ -96,7 +96,7 @@ const Body = () => {
               {recipes &&
                 recipes.slice(-6).map((item, id) => (
                   <div key={id}>
-                    <div className="mx-auto bg-green-50 border border-green-100 rounded-2xl shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                    <div className=" mx-2 my-1 mx-auto bg-green-50 border border-green-100 rounded-2xl shadow-lg overflow-hidden transition-transform transform hover:scale-105">
                       <img
                         src={item.image_url}
                         alt={item.title}
