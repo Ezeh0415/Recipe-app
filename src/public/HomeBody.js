@@ -1,57 +1,18 @@
 import { FaHeart } from "react-icons/fa";
-import { PiWarningFill } from "react-icons/pi";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import image1 from './images/1 (1).jpg';
 import chef_img from './images/chef.jpg';
-import useFetch from "../UseFetch";
+import { useRecipes } from "../providerContext/ProviderContext";
+import Loading from "./Loading";
+import Error from "./Error";
 
 const Body = () => {
-  const apiKey = '830f2955-ec4d-4f19-ba49-d83eaecfdb92';
-  const apiUrl = `https://forkify-api.herokuapp.com/api/v2/recipes?search=cake&key=${apiKey}`;
-  const { data: recipes, loading, error } = useFetch(apiUrl);
-
-  const bgImage = {
-    backgroundColor: 'silver',
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat"
-  };
+  const {recipes, loading, error, bgImage} = useRecipes();
 
   return (
     <div className="body-section">
-      {loading ? (
-        <svg
-          className="w-[30%] ml-[40%]"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 300 150"
-        >
-          <path
-            fill="none"
-            stroke="#16FF21"
-            strokeWidth="5"
-            strokeLinecap="round"
-            strokeDasharray="300 385"
-            strokeDashoffset="0"
-            d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z"
-          >
-            <animate
-              attributeName="stroke-dashoffset"
-              calcMode="spline"
-              dur="2"
-              values="685;-685"
-              keySplines="0 0 1 1"
-              repeatCount="indefinite"
-            />
-          </path>
-        </svg>
-      ) : error ? (
-        <div className="warning">
-          <div className="icon">
-            <PiWarningFill />
-          </div>
-          <h1>could not fetch resourse or poor internet conection</h1>
-        </div>
-      ) : (
-        <>
+      <Loading loading = {loading} />
+      <Error error = {error} />
           {/* First Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center max-w-5xl mx-auto px-4 py-10">
             <div className="space-y-4">
@@ -83,7 +44,7 @@ const Body = () => {
             <div className="bg-green-50 py-16 px-4 sm:px-6 lg:px-8">
               <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-4xl font-extrabold text-green-700 mb-4 capitalize">
-                  Popular Cakes
+                  Popular dishes
                 </h1>
                 <div className="text-lg text-green-900 space-y-2">
                   <p>We provide a variety of food and beverage recipes</p>
@@ -94,7 +55,7 @@ const Body = () => {
 
             <div className="mt-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
               {recipes &&
-                recipes.slice(-6).map((item, id) => (
+                recipes.slice(0,6).map((item, id) => (
                   <div key={id}>
                     <div className=" mx-2 my-1 mx-auto bg-green-50 border border-green-100 rounded-2xl shadow-lg overflow-hidden transition-transform transform hover:scale-105">
                       <img
@@ -108,7 +69,7 @@ const Body = () => {
                             {item.title[0]}
                           </div>
                           <div>
-                            <h2 className="text-xl font-semibold text-green-800">
+                            <h2 className="text-lg font-semibold text-green-800">
                               {item.title}
                             </h2>
                             <p className="text-sm text-green-500">ID: {item.id}</p>
@@ -118,9 +79,7 @@ const Body = () => {
                           Enjoy the sweetness of our most loved cakes, handcrafted with love by top chefs.
                         </p>
                         <div className="flex justify-between items-center">
-                          <button className="bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2 px-4 rounded-lg shadow-sm transition">
-                            Order Now
-                          </button>
+                          
                           <button className="text-green-600 hover:text-green-800 text-lg">
                             <FaHeart />
                           </button>
@@ -177,8 +136,6 @@ const Body = () => {
               </button>
             </div>
           </div>
-        </>
-      )}
     </div>
   );
 };

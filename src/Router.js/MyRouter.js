@@ -5,6 +5,7 @@ import About from '../public/About';
 import Contact from '../public/contact';
 import Nigeria from '../public/RecipeRice';
 import Body from '../public/HomeBody';
+import RecipeDetails from '../public/RecipeDetails';
 const MyRouter = () => {
 
     return ( 
@@ -30,6 +31,9 @@ const MyRouter = () => {
                       </Route>
                       <Route exact path="/Contact">
                           <Contact />
+                      </Route>
+                      <Route exact path="/recipesDetails/:id">
+                        <RecipeDetails />
                       </Route>
                  </Switch>
               <div className="footer">

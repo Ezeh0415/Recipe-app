@@ -1,32 +1,16 @@
 import { FaHeart } from "react-icons/fa";
-import { PiWarningFill } from "react-icons/pi";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import Mainsearch from "./MainSearch";
+import { useRecipes } from "../providerContext/ProviderContext";
+import Loading from "./Loading";
+import Error from "./Error";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
 const Nigeria = () => {
-  const [recipes, setRecipes] = useState([]);
-  const [error, setError] = useState(false);
-  const [loading, setIsLoading] = useState(true);
-  const [record, setRecord] = useState([]);
-  const [querry, setQuerry] = useState("rice");
+ const {recipes: record, loading, error, fullSearch} = useRecipes();
 
-  const apiKey = "830f2955-ec4d-4f19-ba49-d83eaecfdb92";
-
-  useEffect(() => {
-    const apiUrl = `https://forkify-api.herokuapp.com/api/v2/recipes?search=${querry}&key=${apiKey}`;
-
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        setRecipes(data.data.recipes);
-        setRecord(data.data.recipes);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        setError(error);
-        setIsLoading(false);
-      });
-  }, [querry]);
+ console.log(record);
+ 
 
   const [CurrentPage, setCurrentPage] = useState(1);
   const recordsPerPage = 15;
@@ -36,55 +20,14 @@ const Nigeria = () => {
   const npage = Math.ceil(record.length / recordsPerPage);
   const number = [...Array(npage + 1).keys()].slice(1);
 
-  // const Filter = (e) => {
-  //   setRecord(
-  //     recipes.filter((f) =>
-  //       f.title.toLowerCase().includes(e.target.value.toLowerCase())
-  //     )
-  //   );
-  // };
 
-  const fullSearch = (e) => {
-    setQuerry(e.target.value.toLowerCase());
-  };
+
 
   return (
     <div className="ninja">
-      {loading ? (
-          <svg
-          className="w-[30%] ml-[40%]"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 300 150"
-        >
-          <path
-            fill="none"
-            stroke="#16FF21"
-            strokeWidth="5"
-            strokeLinecap="round"
-            strokeDasharray="300 385"
-            strokeDashoffset="0"
-            d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z"
-          >
-            <animate
-              attributeName="stroke-dashoffset"
-              calcMode="spline"
-              dur="2"
-              values="685;-685"
-              keySplines="0 0 1 1"
-              repeatCount="indefinite"
-            />
-          </path>
-        </svg>
-      ) : error ? (
-        <div className="warning">
-          <div className="icon">
-            <PiWarningFill />
-          </div>
-          <h1>could not fetch resource or poor internet connection</h1>
-        </div>
-      ) : (
-        <>
-          <Mainsearch fullSearch={fullSearch} />
+      <Loading loading = {loading} />
+      <Error error = {error} />
+      <Mainsearch fullSearch={fullSearch} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {record &&
@@ -114,13 +57,16 @@ const Nigeria = () => {
                     />
 
                     {/* Footer */}
-                    <div className="p-4">
+                    <div className="p-4 flex items-center justify-between">
                       <p className="text-sm text-gray-600">
                         Created by{" "}
                         <span className="font-semibold text-green-600">
                           {item.publisher}
                         </span>
                       </p>
+                      <Link to={`/recipesDetails/${item.id}`} className="bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-1 px-4 rounded-lg shadow-sm transition">
+                        view recipe
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -164,8 +110,6 @@ const Nigeria = () => {
               </li>
             </ul>
           </nav>
-        </>
-      )}
     </div>
   );
 
