@@ -52,7 +52,9 @@ const Nigeria = () => {
                     {/* Image */}
                     <img
                       src={item.image_url}
-                      alt="foods"
+                      alt={item.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-48 object-cover border-t border-b"
                     />
 

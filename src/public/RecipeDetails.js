@@ -32,8 +32,14 @@ const RecipeDetails = () => {
          <p className="text-lg font-medium capitalize">{title}</p>
       </div>
         <div className="mt-4">
-            <img src={image_url} alt={title} className="w-full h-64 object-cover rounded-lg" />
-        </div>
+          <img
+            src={image_url}
+            alt={title}
+            loading="lazy"
+            decoding="async"
+            className="w-full h-64 object-cover rounded-lg"
+          />
+      </div>
 
         <div>
           <h2>{ingredients}</h2>

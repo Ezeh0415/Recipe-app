@@ -33,7 +33,9 @@ const Body = () => {
             <div className="flex justify-center md:justify-end">
               <img
                 src={image1}
-                alt="food-pic"
+                alt="cooking illustration"
+                loading="lazy"
+                decoding="async"
                 className="rounded-lg w-3/4 md:w-full shadow-md"
               />
             </div>
@@ -61,6 +63,8 @@ const Body = () => {
                       <img
                         src={item.image_url}
                         alt={item.title}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-48 object-cover"
                       />
                       <div className="p-5 space-y-3">
